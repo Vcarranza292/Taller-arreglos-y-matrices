@@ -1,6 +1,5 @@
 package SalasDeCine;
 
-
 import java.util.Scanner;
 
 // ============================================
