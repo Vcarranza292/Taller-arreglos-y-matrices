@@ -10,3 +10,17 @@ package ArrayListYList;package ArrayListYList;
 //           List y el objeto real es ArrayList. Si quiero cambiar a LinkedList
 //           solo cambio el "new" y lo demás sigue igual. Eso es POLIMORFISMO.
 // ============================================================================
+
+import java.util.ArrayList;   // Lista respaldada por un arreglo (rápida para leer con get)
+import java.util.LinkedList;  // Lista de nodos enlazados (buena para agregar/quitar al inicio)
+import java.util.List;        // La interfaz, que uso como tipo de las variables
+
+// CLASE ESTUDIANTE: nombre + lista de notas
+class Estudiante {
+    private String nombre;
+    private List<Double> notas;  // Declarada como List (interfaz), no como ArrayList
+
+    public Estudiante(String nombre) {
+        this.nombre = nombre;
+        this.notas = new ArrayList<>();  // Aquí elijo la implementación: ArrayList, vacía al inicio
+    }
