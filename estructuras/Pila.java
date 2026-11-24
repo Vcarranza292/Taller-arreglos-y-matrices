@@ -6,6 +6,7 @@ public class Pila {
     private int tope;
     
     public Pila(int capacidadInicial){
+        int capacidad = 0;
         datos = new Object[capacidad];
         tope = -1;
     }

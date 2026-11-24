@@ -4,7 +4,6 @@ public class Problema9_5 {
             MultiPilas mp = new MultiPilas();
             mp.insertar(0, "A");
             mp.insertar(1, "B");
-            System.strOut = null; // Referencia auxiliar
             System.out.println("Elementos insertados en multipilas correctamente.");
         } catch (Exception e) {
             e.printStackTrace();
