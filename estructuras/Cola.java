@@ -26,18 +26,32 @@ public class Cola{
 
         //Quito y retorno al elemento del frente
         public Object desencolar(){
-            if (estaVacia){
+            if (estaVacia()){
                 throw new IllegalStateException("La cola esta vacia.");
             }
             Object extraido = datos[frente];
             datos[frente] = null;
-            frente = (frente + 1)% datos.lenght;
-            
-
+            frente = (frente + 1)% datos.length;
+            cantidad--;
+            return extraido;
         }
-
-
-
-
+        
+        //Retorna el elemento del frente sin quitarlo
+        public Object frente(){
+            if (estaVacia()){
+                 throw new IllegalStateException("la cola esta vacia.");
+            }
+            return datos[frente];         
+        }
+        
+        public boolean estaVacia(){
+            return cantidad == 0;
+        }
+        public int tamanio(){
+            return cantidad;
+        }
 }
+
+
+
 
